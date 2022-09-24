@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block titulo%} <title>LOGIN</title>{% endblock %}
+
+{% block menu %}
+<!-- <li>
+   <div class="BtMenu"><a href="{% url 'index'%}" style="text-decoration:none">HOME</a></div>
+</li> -->
+{% endblock %}
+
+{% block contenido %}
+
+<div class="Ingreso">
+   <h2 class="text-center"></h2>
+   <h2 class="text-center">Bienvenido</h2>
+   <div class="ContLog"> 
+     
+
+
+      <form>
+         <div class="form-group">
+            <label for="correo">
+               <h2>Correo</h2>
+            </label>
+            <input id="correo" name="correo" class="form-control" type="email" placeholder="Correo electrónico">{{form.email}}
+         </div>
+         <div class="form-group">
+            <label for="palabraSecreta">
+               <h2>Contraseña</h2>
+            </label>
+            <input id="palabraSecreta" name="palabraSecreta" class="form-control" type="password"
+               placeholder="Contraseña">{{form.contraseña}}
+         </div>
+         <button type="submit" role="link" href=  "{% url 'home'%}">
+            <a href="{% url 'home'%}" style="text-decoration:aqua">Entrar</a>
+         </button>
+         <br>
+         <a href= "{% url 'registrarAdmin'%}">   Registrate</a>
+      </form>
+   </div>
+</div>
+
+{% endblock %}
+
+{% block imgs%}
+{%endblock%}
+{% block img%}
+{%endblock%}

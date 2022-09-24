@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block titulo%} <title>Documentos</title>{% endblock %}
+
+{% block menu %}
+
+
+<li>
+    <div class="BtMenu"><a href="{% url 'home'%}" style="text-decoration:none">HOME</a></div>
+</li>
+<ul id="nav">
+<li>
+    <div class="BtMenu"><a href="{% url 'documentos'%}" style="text-decoration:none">Documentos</a></div>
+    <ul>
+        <li><a href="">Documentos administrativos</a></li>
+        <li><a href="">Actas (circulares, momerandums)</a></li>
+        <li><a href="">Documentos contables</a></li>
+        <li><a href="">Cuestionarios Psicologicos</a></li>
+    </ul>
+</li>
+</ul>
+<li>
+    <div class="BtMenu"><a href="{% url 'formularios'%}" style="text-decoration:none">Formularios</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'reuniones'%}" style="text-decoration:none">Reuniones</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'login'%}" style="text-decoration:none">LOGOUT</a></div>
+</li>
+{% endblock %}
+
+{% block contenido%}
+
+<div class="ContGlobal" >
+<div class="ejemplos">
+    <img src="https://www.monografias.com/trabajos100/metodologia-contabilidad-financiera/image078.jpg"> 
+    <img src="https://image.slidesharecdn.com/tp-110928162608-phpapp01/95/libro-diario-mayores-balances-garca-y-gomez-1-728.jpg?cb=1317227570"> 
+    <img src="https://www.monografias.com/trabajos100/metodologia-contabilidad-financiera/image078.jpg"> 
+    <img src="https://www.monografias.com/trabajos100/metodologia-contabilidad-financiera/image078.jpg"> 
+    <img src="https://www.monografias.com/trabajos100/metodologia-contabilidad-financiera/image078.jpg"> 
+</div>
+</div>
+{% endblock %}

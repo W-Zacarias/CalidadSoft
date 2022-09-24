@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block titulo%} <title>Registrar</title>{% endblock %}
+{% block menu %}
+<!-- <li>
+    <div class="BtMenu"><a href="{% url 'home'%}" style="text-decoration:none">HOME</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'documentos'%}" style="text-decoration:none">Documentos</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'formularios'%}" style="text-decoration:none">Formularios</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'reuniones'%}" style="text-decoration:none">Reuniones</a></div>
+</li> -->
+<li>
+    <div class="BtMenu"><a href="{% url 'login'%}" style="text-decoration:none">REGRESAR</a></div>
+</li>
+{% endblock %}
+
+{% block contenido%}
+
+<div class=ContGlobal>
+
+    <div class="ParrafoRegistro">
+        
+
+
+
+
+        <div class="ParrafoContRegistrar">
+            <h1>Registro</h1>
+        <h2>Eres Reclutador o Buscas Empleo?</h2>
+            <!-- <li>
+                <div class="BtMenu"><a href="{% url 'registrarAdmin'%}" style="text-decoration:none">ADMINISTADOR</div>
+            </li> -->
+            <li>
+                <div class="BtMenu"><a href="{% url 'registrarUser'%}" style="text-decoration:none">USUARIO</div>
+            </li>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

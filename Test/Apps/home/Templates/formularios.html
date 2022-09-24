@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+{% block titulo%} <title>Formularios</title>{% endblock %}
+
+{% block menu %}
+<li>
+    <div class="BtMenu"><a href="{% url 'home'%}" style="text-decoration:none">HOME</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'documentos'%}" style="text-decoration:none">Documentos</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'formularios'%}" style="text-decoration:none">Formularios</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'reuniones'%}" style="text-decoration:none">Reuniones</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'login'%}" style="text-decoration:none">LOGOUT</a></div>
+</li>
+{% endblock %}
+{% block contenido%}
+<section class="from-register">
+    <form method="POST">
+        {% csrf_token %}
+        {% if error%}
+        <h2>{{error}}</h2>
+        {% else %}
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <h4 class="titulos">Formulario Registro </h4>
+            <p class="controls">Usuario: </p>
+            <div>
+                <div class=" form-control-lg">{{form.IDusuario}}</div>
+            </div>
+            <p class="controls">Edad: </p>
+            <div>
+                <div class=" form-control-lg">{{form.edad}}</div>
+            </div>
+            <p class="controls">Sexo: </p>
+            <div>
+                <div class="form-control-lg">{{form.sexo}}</div>
+            </div>
+
+            <p class="controls">Departamento: </p>
+            <div>
+                <div class="form-control-lg">{{form.IDDepartamentos}}</div>
+            </div>
+            <p class="controls">Direccion: </p>
+            <div>
+                <div class="form-control-lg">{{form.dMunicipioDireccionDeRecibido}}</div>
+            </div>
+            <p class="controls">CUI: </p>
+            <div>
+                <div class="form-control-lg">{{form.CUI}}</div>
+            </div>
+            <p class="controls">Fotografia DPI: </p>
+            <div>
+                <div class="form-control-lg">{{form.fotografiaDPI}}</div>
+            </div>
+            <p class="controls">Fotografia Personal: </p>
+            <div>
+                <div class="form-control-lg">{{form.fotografiaPersonal}}</div>
+            </div>
+            <p class="controls">Cartas de Recomendación: </p>
+            <div>
+                <div class="form-control-lg">{{form.cartaRecomendacion}}</div>
+            </div>
+            <p class="controls">Cartas Laborales: </p>
+            <div>
+                <div class="form-control-lg">{{form.cartaLaboral}}</div>
+            </div>
+            <p class="controls">Titulos y/o Diplomas: </p>
+            <div>
+                <div class="form-control-lg">{{form.tituloyDiplomas}}</div>
+            </div>
+            <p class="controls">Fotografia RTU: </p>
+            <div>
+                <div class="form-control-lg">{{form.fotografiaRTU}}</div>
+            </div>
+            <p class="controls">Antecedentes Penales: </p>
+            <div>
+                <div class="form-control-lg">{{form.antecedentespenales}}</div>
+            </div>
+            <p class="controls">Antecedentes Policiacos: </p>
+            <div>
+                <div class="form-control-lg">{{form.antecedentespoliciacos}}</div>
+            </div>
+
+            <button type="submit" name="Guardar">Guardar</button>
+        </form>
+        {% endif %}
+    </form>
+</section>
+
+{% endblock %}

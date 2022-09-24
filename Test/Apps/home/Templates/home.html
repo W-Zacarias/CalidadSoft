@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block menu %}
+<li>
+    <div class="BtMenu"><a href="{% url 'home'%}" style="text-decoration:none">HOME</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'store'%}" style="text-decoration:none">Store</a></div>
+</li>
+<li>
+    <div class="BtMenu"><a href="{% url 'index2'%}" style="text-decoration:none">Productos</a></div>
+</li>
+
+<li>
+    <div class="BtMenu"><a href="{% url 'index'%}" style="text-decoration:none">LOGOUT</a></div>
+</li> 
+{% endblock %}
+
+{% block titulo2%}
+BIENVENIDOS
+{% endblock %}
+
+<!-- {% block parrafo%}
+
+{% endblock %} -->
